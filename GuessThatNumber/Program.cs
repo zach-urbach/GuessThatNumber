@@ -49,16 +49,16 @@ namespace GuessThatNumber
                 //telling the player if its not right
                 string newInput = Console.ReadLine();
                 Input = Convert.ToInt32(newInput);
-                Console.WriteLine("no it's not " + newInput);
+                Console.WriteLine("no it's not " + newInput + " guess again.");
                 
                 if (Input > randomNumber)
                 //lower or higher?
                 {
-                    Console.WriteLine("Lower");
+                    Console.WriteLine("Think Lower");
                 }
                 else if (Input < randomNumber)
                 {
-                    Console.WriteLine("Higher");
+                    Console.WriteLine("Think Higher");
                 }
                 guessCount++;
             }
