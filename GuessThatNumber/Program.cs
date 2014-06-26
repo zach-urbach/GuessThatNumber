@@ -42,12 +42,31 @@ namespace GuessThatNumber
             //typeing in the guess
             Console.WriteLine("Type in your guess.");
             int Input = 0;
+            //number of guesses
+            int guessCount = 0;
             while (Input != randomNumber)
             {
-               
+                //telling the player if its not right
+                string newInput = Console.ReadLine();
+                Input = Convert.ToInt32(newInput);
+                Console.WriteLine("no it's not " + newInput);
+                
+                if (Input > randomNumber)
+                //lower or higher?
+                {
+                    Console.WriteLine("Lower");
+                }
+                else if (Input < randomNumber)
+                {
+                    Console.WriteLine("Higher");
+                }
+                guessCount++;
             }
             //end text with a twist
+            Console.WriteLine();
             Console.WriteLine("WAIT " + Input + "! that’s right, you win!");
+            Console.WriteLine();
+            Console.WriteLine("You made " + guessCount + " guesses");
         }
 
 
